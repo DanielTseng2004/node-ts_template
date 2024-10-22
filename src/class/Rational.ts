@@ -42,16 +42,16 @@ export class Rational {
     public equals(r: Rational): boolean {
         return this.normalize().numerator == r.numerator && this.normalize().denominator == r.denominator;
     }
-    public static _parseRational(numer:String[], denomina:String[]):Rational{
+    public static _parseRational(numer: String[], denomina: String[]): Rational {
         let num = numer.join('');
         let denom = denomina.join('');
-        return new Rational(parseInt(num),parseInt(denom));
+        return new Rational(parseInt(num), parseInt(denom));
     }
-    public static parseRational(str:String):Rational{
+    public static parseRational(str: String): Rational {
         let parts = str.split('/');
         let num = parseInt(parts[0]);
         let denom = parseInt(parts[1]);
-        return new Rational(num,denom);
+        return new Rational(num, denom);
     }
 
 }
